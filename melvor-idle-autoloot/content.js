@@ -17,7 +17,7 @@
 
   function tickHandler () {
     // Set up an interval to click the button every minute (60000 milliseconds)
-    setInterval(theTick, 10000); // 30000 milliseconds = 30 seconds
+    setInterval(theTick, 30000); // 30000 milliseconds = 30 seconds
   }
 
   function checkIfGmaeLoaded () {
