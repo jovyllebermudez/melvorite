@@ -3,7 +3,7 @@
   // const lootButton1 = "#combat-loot button.btn.btn-sm.btn-success";
   const lootButton2 = '#combat-loot lang-string[lang-id="COMBAT_MISC_46"]';
 
-  const interval = 10000 // 10000 milliseconds = 10 seconds
+  const interval = 60000 // 60000 milliseconds = 60 seconds
 
   let lootElement = null
 

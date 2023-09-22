@@ -4,8 +4,8 @@
   const currentElementId = "#combat-player-hitpoints-current-1"
   const eatElementId = "#combat-footer-minibar-eat-btn"
 
-  const interval = 2000 // 2000 milliseconds = 2 seconds
-  const heathRatio = 0.7 // 70% health, eat when health is below this
+  const interval = 4000 // 2000 milliseconds = 2 seconds
+  const heathRatio = 0.8 // 70% health, eat when health is below this
 
   let eatElement = document.querySelector(eatElementId)
   function startEating () {
