@@ -1,7 +1,5 @@
 # Melvor Idle Chrome Extension
 
-![extension_logo.png](https://raw.githubusercontent.com/jovyllebermudez/melvorite/6e5a3ae7fc6b95e877035f325c35fed275b02a4a/melvor-idle-autoeat/icon.png)
-
 ![Melvor Idle Autoeater Autolooter](melvor-idle-autoeat/icon.png?raw=true "Logo")
 
 ## Description
