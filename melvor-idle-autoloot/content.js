@@ -9,10 +9,10 @@
 
   function startLooting () {
     if (isReadyToLoot()) {
-      console.log("MelAutoLoot looting!");
+      console.log("Melvor 1.2 AutoLooter looting!");
       lootElement.parentElement.click();
     } else {
-      // console.log("MelAutoLoot no ready to loot!");
+      // console.log("Melvor 1.2 AutoLooter no ready to loot!");
     }
   }
 
@@ -28,7 +28,7 @@
   }
 
   function startLoopCheck () {
-    // console.log("MelAutoLoot start the loop check!");
+    // console.log("Melvor 1.2 AutoLooter start the loop check!");
     setInterval(() => { // 2000 milliseconds = 2 seconds
       startLooting();
     }, interval);
@@ -46,7 +46,7 @@
   }
 
   // Start checking for the variable
-  console.log("MelAutoLoot started!");
+  console.log("Melvor 1.2 AutoLooter started!");
   checkIfGmaeLoaded();
 
 })();
