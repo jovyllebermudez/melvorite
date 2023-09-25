@@ -3,16 +3,16 @@
   // const lootButton1 = "#combat-loot button.btn.btn-sm.btn-success";
   const lootButton2 = '#combat-loot lang-string[lang-id="COMBAT_MISC_46"]';
 
-  const interval = 10000 // 10000 milliseconds = 10 seconds
+  const interval = 60000 // 60000 milliseconds = 60 seconds
 
   let lootElement = null
 
   function startLooting () {
     if (isReadyToLoot()) {
-      console.log("MelAutoLoot looting!");
+      console.log("Melvor 1.2 AutoLooter looting!");
       lootElement.parentElement.click();
     } else {
-      // console.log("MelAutoLoot no ready to loot!");
+      // console.log("Melvor 1.2 AutoLooter no ready to loot!");
     }
   }
 
@@ -28,7 +28,7 @@
   }
 
   function startLoopCheck () {
-    // console.log("MelAutoLoot start the loop check!");
+    // console.log("Melvor 1.2 AutoLooter start the loop check!");
     setInterval(() => { // 2000 milliseconds = 2 seconds
       startLooting();
     }, interval);
@@ -46,7 +46,7 @@
   }
 
   // Start checking for the variable
-  console.log("MelAutoLoot started!");
+  console.log("Melvor 1.2 AutoLooter started!");
   checkIfGmaeLoaded();
 
 })();
