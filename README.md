@@ -2,6 +2,8 @@
 
 ![extension_logo.png](https://raw.githubusercontent.com/jovyllebermudez/melvorite/6e5a3ae7fc6b95e877035f325c35fed275b02a4a/melvor-idle-autoeat/icon.png)
 
+![Melvor Idle Autoeater Autolooter](melvor-idle-autoeat/icon.png?raw=true "Logo")
+
 ## Description
 
 The Melvor Idle Chrome Extension enhances your gaming experience in Melvor Idle by providing useful features and improvements to the game. Whether you're a seasoned player or just starting out, this extension aims to make your time in the game more enjoyable and efficient.
