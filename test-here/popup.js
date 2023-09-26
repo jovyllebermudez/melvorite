@@ -1,6 +1,6 @@
 // popup.js
 document.addEventListener("DOMContentLoaded", function () {
-  const button = document.querySelector("#clickButton");
+  const button = document.querySelector("#click-button");
 
   if (button) {
     button.addEventListener("click", () => {
