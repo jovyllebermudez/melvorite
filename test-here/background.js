@@ -1,3 +1,7 @@
+// Define the interval (in milliseconds) at which to send messages (e.g., every 30 seconds).
+const intervalInMilliseconds = 2000 // 2 seconds // eat cheacking interval
+const lootInterval = 60000 // 60 seconds // loot checking interval
+
 // background.js
 // eslint-disable-next-line
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -41,12 +45,21 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 // Define the function to send a message to tabs.
 function tryToEat () {
+  doTheAction('autoeat')
+}
+// Define the function to send a message to tabs.
+function tryToLoot () {
+  doTheAction('autoloot')
+}
+
+// Define the function to send a message to tabs.
+function doTheAction (actionStr) {
   // console.log('tryToEat')
   // eslint-disable-next-line
   chrome.tabs.query({ url: 'https://melvoridle.com/*' }, (tabs) => {
     tabs.forEach((tab) => {
       try { // eslint-disable-next-line
-        chrome.tabs.sendMessage(tab.id, { action: 'autoeat' }, (response) => {// eslint-disable-next-line
+        chrome.tabs.sendMessage(tab.id, { action: actionStr }, (response) => {// eslint-disable-next-line
           if (chrome.runtime.lastError) {
             // Handle any error that occurred during message sending.
             // console.log("chrome.runtime.lastError:", chrome.runtime.lastError);
@@ -63,34 +76,6 @@ function tryToEat () {
     })
   })
 }
-// Define the function to send a message to tabs.
-function tryToLoot () {
-  // console.log('tryToLoot')
-  // eslint-disable-next-line
-  chrome.tabs.query({ url: 'https://melvoridle.com/*' }, (tabs) => {
-    tabs.forEach((tab) => {
-      try { // eslint-disable-next-line
-        chrome.tabs.sendMessage(tab.id, { action: 'autoloot' }, (response) => {// eslint-disable-next-line
-          if (chrome.runtime.lastError) {
-            // Handle any error that occurred during message sending.
-            // console.log("autoloot lastError:", chrome.runtime.lastError);
-          } else {
-            // Handle the response from the content script if needed.
-            // console.log("autoloot Message sent successfully:", response);
-          }
-        })
-      } catch (error) {
-        // Handle any error that occurred during the try-catch block.
-        console.error('trycatch')
-        console.error(error)
-      }
-    })
-  })
-}
-
-// Define the interval (in milliseconds) at which to send messages (e.g., every 30 seconds).
-const intervalInMilliseconds = 2000 // 2 seconds
-const lootInterval = 60000 // 60 seconds
 
 // Set up a recurring timer to send messages at the specified interval.
 setInterval(tryToEat, intervalInMilliseconds)
