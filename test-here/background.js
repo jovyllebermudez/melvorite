@@ -84,7 +84,7 @@ function tryToLoot () {
 
 // Define the interval (in milliseconds) at which to send messages (e.g., every 30 seconds).
 const intervalInMilliseconds = 2000; // 2 seconds
-const lootInterval = 60000; // 30 seconds
+const lootInterval = 60000; // 60 seconds
 
 // Set up a recurring timer to send messages at the specified interval.
 setInterval(tryToEat, intervalInMilliseconds);

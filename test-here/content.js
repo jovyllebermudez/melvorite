@@ -1,16 +1,18 @@
 // content.js
 
+
+
 function nowLoot () {
   const lootButtonSelector = '#combat-loot lang-string[lang-id="COMBAT_MISC_46"]';
   const lootElement = document.querySelector(lootButtonSelector);
   const numberOfLoots = document.querySelectorAll("#combat-loot .bank-item.no-bg.btn-light.pointer-enabled").length;
 
   if (lootElement && numberOfLoots > 0) {
-    console.log("Melvor 1.2 AutoLooter looting!");
+    console.log("Melvor 1.2 AutoLooter looting!" + getTime());
     lootElement.parentElement.click();
     return "Melvor 1.2 AutoLooter looting";
   } else {
-    console.log("Melvor 1.2 AutoLooter Looting Not Ready!");
+    console.log("Melvor 1.2 AutoLooter Looting Not Ready! " + getTime());
     return "Melvor 1.2 AutoLooter Not Ready";
   }
 }
@@ -68,15 +70,30 @@ function nowEat () {
     const current = parseInt(currentElement.textContent)
     const ratio = current / max;
     if (ratio < lowHealth) {
-      console.log("Melvor 1.2  Eating!");
+      console.log("Melvor 1.2  Eating!" + getTime());
       rapidEat();
     } else {
-      console.log("Melvor 1.2  Not Eating!");
+      console.log("Melvor 1.2  Not Eating!" + getTime());
     }
   } else {
-    console.log("Melvor 1.2  Not Eating!");
+    console.log("Melvor 1.2  Not Eating!" + getTime());
   }
 
+}
+
+function getTime (justTime = true) {
+
+  const currentDate = new Date();
+
+  const currentHour = currentDate.getHours();
+  const currentMinute = currentDate.getMinutes();
+
+  const formattedTime = `${currentHour}:${currentMinute.toString().padStart(2, '0')}`;
+  if (justTime) {
+    return formattedTime;
+  } else {
+    return `Current time: ${formattedTime}`;
+  }
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
