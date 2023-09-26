@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "eslint": "^8.50.0"
+  },
+  "name": "melvorite",
+  "description": "melvor idle helper mine just mine",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jovyllebermudez/melvorite.git"
+  },
+  "author": "jovylle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jovyllebermudez/melvorite/issues"
+  },
+  "homepage": "https://github.com/jovyllebermudez/melvorite#readme"
+}
