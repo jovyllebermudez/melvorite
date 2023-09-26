@@ -1,3 +1,4 @@
+// ==UserScript==
 (() => {
 
   // const lootButton1 = "#combat-loot button.btn.btn-sm.btn-success";
@@ -49,5 +50,5 @@
   // Start checking for the variable
   console.log("Melvor 1.2 AutoLooter started!");
   checkIfGmaeLoaded();
-
+  return null;
 })();

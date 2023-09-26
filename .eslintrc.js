@@ -1,8 +1,8 @@
-module.exports = {
+export default {
   // Specify the environment in which your code will run (e.g., browser, node).
   env: {
     browser: true,
-    node: true,
+    node: false,
   },
   // Extend configurations for popular coding styles or frameworks.
   extends: [
