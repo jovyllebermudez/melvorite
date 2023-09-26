@@ -45,6 +45,7 @@
     }
   }
 
+  console.log("Melvor 1.2 AutoLooter loading...")
   // Start checking for the variable
   console.log("Melvor 1.2 AutoLooter started!");
   checkIfGmaeLoaded();
