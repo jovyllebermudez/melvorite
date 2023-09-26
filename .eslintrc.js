@@ -4,6 +4,9 @@ export default {
     browser: true,
     node: false,
   },
+  parserOptions: {
+    sourceType: 'module', // Use ESM syntax
+  },
   // Extend configurations for popular coding styles or frameworks.
   extends: [
     'eslint:recommended', // Use ESLint's recommended rules.
