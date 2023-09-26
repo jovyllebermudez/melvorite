@@ -1,13 +1,14 @@
-name: Lint Code
+name: Code Checker with Super-Linter
 
 on:
   pull_request:
-    paths:
-      - '**/*.js' # Adjust this pattern to match the files you want to lint
+    branches:
+      - main # Adjust the branch name as needed
 
 jobs:
   lint:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -15,12 +16,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14' # Adjust the Node.js version as needed
+          node-version: 14 # Use the desired Node.js version
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install dependencies
+        run: npm install # You can also use yarn if preferred
 
       - name: Run Super-Linter
-        run: |
-          cd .github/super-linter
-          ./run-action.sh
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: "false" # Set to "true" if you want to validate all files
+          DEFAULT_BRANCH: "main" # Replace with your default branch
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
