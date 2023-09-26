@@ -1,9 +1,7 @@
 // ==UserScript==
 (() => {
-
   // const lootButton1 = "#combat-loot button.btn.btn-sm.btn-success";
   const lootButton2 = '#combat-loot lang-string[lang-id="COMBAT_MISC_46"]';
-
   const interval = 60000 // 60000 milliseconds = 60 seconds
 
   let lootElement = null
@@ -23,7 +21,7 @@
     const numberOfLoots = document.querySelectorAll("#combat-loot .bank-item.no-bg.btn-light.pointer-enabled").length
     if (lootElement && numberOfLoots > 0) {
       return true;
-    }else{
+    } else {
       return false;
     }
   }
