@@ -1,0 +1,26 @@
+name: Lint Code
+
+on:
+  pull_request:
+    paths:
+      - '**/*.js' # Adjust this pattern to match the files you want to lint
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Adjust the Node.js version as needed
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Super-Linter
+        run: |
+          cd .github/super-linter
+          ./run-action.sh

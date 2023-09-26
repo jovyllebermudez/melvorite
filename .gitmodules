@@ -1,0 +1,3 @@
+[submodule ".github/super-linter"]
+	path = .github/super-linter
+	url = https://github.com/github/super-linter.git
