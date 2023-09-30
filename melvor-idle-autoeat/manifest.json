@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Melvor 1.2 Autoeater",
+  "name": "Melvor Idle 1.2 Auto eater",
   "version": "1.1",
   "description": "Melvor 1.2 Autoeater helps your character to survive by eating food when your health is low.",
   "content_scripts": [

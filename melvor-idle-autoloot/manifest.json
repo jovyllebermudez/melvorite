@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Melvor 1.2 AutoLooter",
-  "version": "1.1",
+  "name": "Melvor Idle 1.2 Auto Looter",
+  "version": "1.2",
   "description": "Melvor 1.2 AutoLooter is a must-have for avid gamers who hate missing out on precious loot. AutoLooter comes to the rescue!",
   "content_scripts": [
     {
