@@ -51,20 +51,18 @@
     const foodQtyElement = document.querySelector(foodQtyElementId)
     eatElement = document.querySelector(eatElementId)
 
-    if (!(maxElement && currentElement && eatElement && foodQtyElement))
-      return false // if any of the element is not found, don't proceed
+    if (!(maxElement && currentElement && eatElement && foodQtyElement)) { return false } // if any of the element is not found, don't proceed
 
     const foodQty = parseInt(foodQtyElement.textContent)
     if (foodQty <= 0) {
       console.log('Melvor 1.2 Autoeater food is NOT available!')
       return false
-    } // if food is not available don't proceed 
+    } // if food is not available don't proceed
 
     const max = parseInt(maxElement.textContent)
     const current = parseInt(currentElement.textContent)
     const ratio = current / max
-    if (ratio > lowHealth) 
-      return false // if health is above lowHealth, don't proceed
+    if (ratio > lowHealth) { return false } // if health is above lowHealth, don't proceed
 
     return true
   }
